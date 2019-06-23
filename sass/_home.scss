@@ -1,0 +1,45 @@
+.home {
+  background-color: $color-grey-light-1;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+
+    &--1 {
+      color: $color-secondary;
+    }
+
+    &__btn {
+      background-color: transparent;
+      font-size: 2rem;
+      padding: 1.5rem 3rem;
+      border: none;
+      list-style: none;
+      text-decoration: none;
+      color: $color-primary;
+
+      display: flex;
+      align-items: center;
+      transition: all 0.5s;
+
+      &__icon {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 2rem;
+        fill: #eee;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+        color: $color-grey-light-1;
+      }
+    }
+  }
+}
