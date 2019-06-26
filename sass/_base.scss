@@ -30,14 +30,6 @@ html {
 
 body {
   font-family: $font-primary;
-  color: $color-grey-dark-2;
   font-weight: 300;
   line-height: 1.6;
-}
-
-// Container setup
-.container {
-  display: grid;
-  grid-template-rows: 100vh min-content repeat(2, 100vh) 60vh 40vh;
-  grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
 }

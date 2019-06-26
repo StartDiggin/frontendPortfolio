@@ -1,49 +1,21 @@
 .about {
-  grid-column: col-start 2 / -2;
+  grid-column: col-start 1 / -1;
+  height: 100vh;
   display: grid;
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
-  grid-template-rows: 5vw 2fr repeat(2, 1fr);
-  margin: 3rem 0;
-  grid-gap: 2rem; }
-  .about__heading {
-    grid-column: col-start 1 / -1;
-    font-size: 2rem;
-    color: black;
-    display: grid;
-    justify-content: center; }
-    .about__heading::after {
-      content: "";
-      height: 2px;
-      display: block;
-      background-color: currentColor; }
-  .about__image {
-    background-color: yellow;
-    grid-column: col-start 1 / col-end 2;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    height: 15vw;
-    width: 15vw;
-    margin: 0 auto; }
-  .about__info {
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]); }
+  .about__goal {
     background-color: aqua;
-    grid-column: col-start 1 / col-end 2;
-    grid-row: 3 / 4; }
-  .about__skills {
-    background-color: orangered;
-    grid-column: col-start 3 / span 2;
-    grid-row: 2 / 4; }
-  .about__goals {
-    background-color: fuchsia;
-    grid-column: col-start 1 / -1;
+    height: 11rem;
+    width: 11rem;
+    margin: 0 auto;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center; }
-    .about__goals__box {
-      background-color: red;
-      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      height: 5vw;
-      width: 5vw;
-      margin: 0 auto;
-      display: flex; }
+    justify-content: center;
+    align-items: center; }
+    .about__goal__icon {
+      height: 4rem;
+      width: 4rem;
+      fill: #000; }
 
 *,
 *::before,
@@ -58,84 +30,47 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6d5d4b;
   font-weight: 300;
   line-height: 1.6; }
 
-.container {
+.heading {
+  grid-column: col-start 1 / -1;
+  font-size: 4rem;
   display: grid;
-  grid-template-rows: 100vh min-content repeat(2, 100vh) 60vh 40vh;
-  grid-template-columns: repeat(8, [col-start] 1fr [col-end]); }
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  grid-column-gap: 2rem; }
+  .heading::before, .heading::after {
+    content: "";
+    height: 2px;
+    display: block;
+    background-color: currentColor; }
 
 .contact {
-  background-color: royalblue;
-  grid-column: col-start 1 / -1; }
+  background-color: aquamarine; }
 
 .footer {
-  background-color: violet;
-  grid-column: col-start 1 / -1; }
-
-.header {
-  background-color: rgba(198, 153, 99, 0.9);
-  grid-column: col-start 1 / -1;
-  color: #fff;
-  z-index: 10;
-  position: sticky;
-  top: 0;
-  width: 100%; }
-  .header__nav {
-    display: flex;
-    margin: 1.5rem 3rem;
-    justify-content: space-around;
-    list-style: none;
-    font-size: 1.6rem; }
-    .header__nav__link {
-      cursor: pointer;
-      border-radius: 50%;
-      width: 10rem;
-      box-shadow: 0 2rem 4rem rgba(16, 29, 44, 0.4);
-      display: flex;
-      justify-content: center; }
-      .header__nav__link a {
-        text-decoration: none;
-        color: currentColor; }
-      .header__nav__link:hover {
-        transform: translateY(2px); }
+  background-color: palegoldenrod; }
 
 .home {
-  background-color: #f9f7f6;
+  background-color: aquamarine;
   grid-column: 1 / -1;
-  display: flex;
+  height: 100vh;
+  display: grid;
   justify-content: center;
   align-items: center; }
-  .home__name {
+  .home__title {
+    height: 20vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 2rem; }
-    .home__name--1 {
-      color: #101d2c; }
-    .home__name__btn {
-      background-color: transparent;
-      font-size: 2rem;
-      padding: 1.5rem 3rem;
-      border: none;
-      list-style: none;
-      text-decoration: none;
-      color: #c69963;
-      display: flex;
-      align-items: center;
-      transition: all 0.5s; }
-      .home__name__btn__icon {
-        height: 2rem;
-        width: 2rem;
-        margin-left: 2rem;
-        fill: #eee; }
-      .home__name__btn:hover {
-        background-color: #c69963;
-        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-        color: #f9f7f6; }
+    justify-content: center;
+    align-items: center; }
 
 .projects {
-  background-color: aquamarine;
-  grid-column: col-start 2 / -2; }
+  background-color: blueviolet; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+  grid-row-gap: 3rem; }

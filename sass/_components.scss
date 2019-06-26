@@ -1,0 +1,17 @@
+.heading {
+  grid-column: col-start 1 / -1;
+  font-size: 4rem;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  grid-column-gap: 2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 2px;
+    display: block;
+    background-color: currentColor;
+  }
+}
